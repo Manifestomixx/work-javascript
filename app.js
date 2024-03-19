@@ -32,9 +32,14 @@ let h1 = document.querySelector("h1");
 
 function decremental() {
     h1.innerText --;
-    document.body.style.backgroundColor = "red";
-    
+    if (parseInt(h1.innerText) < 0) {
+        document.body.style.backgroundColor = "red";
+
+    }
+   
 }
+
+
 dec.addEventListener("click",decremental)
 
 
@@ -43,8 +48,9 @@ let inc = document.querySelector(".inc");
 let newH1 = document.querySelector("h1");
 function incremental(){
     newH1.innerText ++;
+    if (parseInt(h1.innerText) > 0) {
     document.body.style.backgroundColor = "green";
-    
+    }
     
 }
 
@@ -55,8 +61,10 @@ inc.addEventListener("click",incremental)
 let res = document.querySelector(".res");
 let nH1 = document.querySelector("h1");
 function reset(){
-    nH1.innerText  = [0];
+    if (parseInt(nH1.innerText) === 0);
+    nH1.innerText  = 0;
     document.body.style.backgroundColor = "yellow";
+     
 }
 
 
